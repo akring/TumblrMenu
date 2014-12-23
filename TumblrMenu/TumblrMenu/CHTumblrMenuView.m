@@ -24,6 +24,7 @@
 //  THE SOFTWARE.
 
 #import "CHTumblrMenuView.h"
+#import "UIImage+ImageEffects.h"
 #define CHTumblrMenuViewTag 1999
 #define CHTumblrMenuViewImageHeight 90
 #define CHTumblrMenuViewTitleHeight 20
@@ -94,6 +95,29 @@
     return self;
 }
 
+/**
+ *  设置虚化后的背景
+ */
+- (void)setBluredBackground{
+    
+    backgroundView_.image = [[self convertViewToImage] applyLightEffect];
+}
+
+/**
+ *  获取屏幕截屏
+ *
+ *  @return 截图
+ */
+-(UIImage *)convertViewToImage
+{
+    UIGraphicsBeginImageContext(self.superview.bounds.size);
+    [self.superview drawViewHierarchyInRect:self.superview.bounds afterScreenUpdates:YES];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 - (void)addMenuItemWithTitle:(NSString*)title andIcon:(UIImage*)icon andSelectedBlock:(CHTumblrMenuViewSelectedBlock)block
 {
     CHTumblrMenuItemButton *button = [CHTumblrMenuItemButton TumblrMenuItemButtonWithTitle:title andIcon:icon andSelectedBlock:block];
@@ -134,7 +158,7 @@
         CHTumblrMenuItemButton *button = buttons_[i];
         button.frame = [self frameForButtonAtIndex:i];
     }
-    
+    [self setBluredBackground];
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer

@@ -37,6 +37,8 @@
 		776060DB18573F4F005424C0 /* tab_bar_button_compose_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060D918573F4F005424C0 /* tab_bar_button_compose_selected@2x.png */; };
 		776060DC18573F4F005424C0 /* tab_bar_button_compose_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060DA18573F4F005424C0 /* tab_bar_button_compose_unselected@2x.png */; };
 		776060E018574380005424C0 /* CHTumblrMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776060DF18574380005424C0 /* CHTumblrMenuView.m */; };
+		CE7142DF1A4952AA0057D5B9 /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7142DC1A4952AA0057D5B9 /* UIColor+Theme.m */; };
+		CE7142E01A4952AA0057D5B9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7142DE1A4952AA0057D5B9 /* UIImage+ImageEffects.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,10 @@
 		776060DA18573F4F005424C0 /* tab_bar_button_compose_unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_bar_button_compose_unselected@2x.png"; sourceTree = "<group>"; };
 		776060DE18574380005424C0 /* CHTumblrMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTumblrMenuView.h; sourceTree = "<group>"; };
 		776060DF18574380005424C0 /* CHTumblrMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTumblrMenuView.m; sourceTree = "<group>"; };
+		CE7142DB1A4952AA0057D5B9 /* UIColor+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Theme.h"; sourceTree = "<group>"; };
+		CE7142DC1A4952AA0057D5B9 /* UIColor+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Theme.m"; sourceTree = "<group>"; };
+		CE7142DD1A4952AA0057D5B9 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		CE7142DE1A4952AA0057D5B9 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,10 +218,23 @@
 		776060DD18574380005424C0 /* TumblrMenu */ = {
 			isa = PBXGroup;
 			children = (
+				CE7142DA1A4952990057D5B9 /* Categories */,
 				776060DE18574380005424C0 /* CHTumblrMenuView.h */,
 				776060DF18574380005424C0 /* CHTumblrMenuView.m */,
 			);
 			path = TumblrMenu;
+			sourceTree = "<group>";
+		};
+		CE7142DA1A4952990057D5B9 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CE7142DB1A4952AA0057D5B9 /* UIColor+Theme.h */,
+				CE7142DC1A4952AA0057D5B9 /* UIColor+Theme.m */,
+				CE7142DD1A4952AA0057D5B9 /* UIImage+ImageEffects.h */,
+				CE7142DE1A4952AA0057D5B9 /* UIImage+ImageEffects.m */,
+			);
+			name = Categories;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +351,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7760607A1855F40B005424C0 /* main.m in Sources */,
+				CE7142DF1A4952AA0057D5B9 /* UIColor+Theme.m in Sources */,
+				CE7142E01A4952AA0057D5B9 /* UIImage+ImageEffects.m in Sources */,
 				7760607E1855F40B005424C0 /* CHAppDelegate.m in Sources */,
 				776060E018574380005424C0 /* CHTumblrMenuView.m in Sources */,
 				776060871855F40B005424C0 /* CHViewController.m in Sources */,
