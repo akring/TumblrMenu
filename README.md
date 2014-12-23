@@ -1,13 +1,6 @@
 ## CHTumblrMenuView ##
 
-Tumblr iOS app like menu view.
-
-Completely created using core animation.
-
-Easy to drop into your project.
-
-You can add as many items as you want, the CHTumblrMenuView will layout them automatically.
-
+Fork自cyndibaby905/TumblrMenu，加入虚化背景，如需更好的效果，可以结合GPUImage来实现
 
 ## Requirements ##
 
